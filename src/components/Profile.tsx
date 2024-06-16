@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "./ui/Tabs";
+import FollowButton from "./ui/FollowButton";
+import { Info } from "lucide-react";
 
 interface HighlightedTextProps {
   number: number;
@@ -33,7 +35,11 @@ const Profile: React.FC = () => {
             key={index}
             className="border border-[#434343] p-4 rounded-xl mb-4 flex justify-start items-start gap-4"
           >
-            <img src="/assets/bunny-profile.png" alt="bunny" className="mt-1 h-16 w-16"/>
+            <img
+              src="/assets/bunny-profile.png"
+              alt="bunny"
+              className="mt-1 h-16 w-16"
+            />
             <div>
               <h3>KITTYANN Token</h3>
               <p className="text-yellow-500">100 $KITTYANN (0.1 ETH)</p>
@@ -48,7 +54,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="w-full md:w-3/5 md:h-screen bg-black text-white p-6">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center relative">
         <div className="flex flex-col">
           <div className="rounded-full bg-[#f9f9f9] w-24 h-24 mb-4"></div>
           <h1 className="text-xl">@KakarotBuilds</h1>
@@ -67,10 +73,21 @@ const Profile: React.FC = () => {
             </div>
           </div>
           <div className="mt-4">
-            <p> <span className="text-gray-500">Rewards Earned:</span> 1.12 ETH</p>
+            <p>
+              {" "}
+              <span className="text-gray-500">Rewards Earned:</span> 1.12 ETH
+            </p>
           </div>
         </div>
+        <div className="absolute right-0 top-0 md:top-1/2 flex flex-col gap-2">
+          <span className="text-xl underline text-yellow-400 flex items-center justify-center">
+            <span> 30.23</span>
+            <Info className="h-4 w-4 ml-1 mt-1" />
+          </span>
+          <FollowButton />
+        </div>
       </div>
+
       <div className="mt-8">
         <Tabs tabs={tabs} activeTab={activeTab} onTabClick={setActiveTab} />
         <div className="mt-4">
