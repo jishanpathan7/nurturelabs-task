@@ -53,7 +53,7 @@ const Profile: React.FC = () => {
   const noContentMessage = <div>No content yet.</div>;
 
   return (
-    <div className="w-full md:w-2/5 md:h-screen bg-black text-white p-6 px-10 relative">
+    <div className="w-full md:w-2/5 md:h-screen bg-black text-white p-6 md:px-10 relative">
       <button className="absolute top-0 left-2 md:left-0">
         <MoveLeft />
       </button>
