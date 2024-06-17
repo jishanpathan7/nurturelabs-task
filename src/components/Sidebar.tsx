@@ -6,7 +6,7 @@ import ProfileButton from "./ui/ProfileButton";
 import SearchInput from "./ui/SearchInput";
 import { Menu, X } from "lucide-react";
 
-const Sidebar = () => {
+const Sidebar:React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
