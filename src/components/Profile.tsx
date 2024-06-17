@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "./ui/Tabs";
 import FollowButton from "./ui/FollowButton";
-import { Info } from "lucide-react";
+import { Info, MoveLeft } from "lucide-react";
 
 interface HighlightedTextProps {
   number: number;
@@ -53,8 +53,11 @@ const Profile: React.FC = () => {
   const noContentMessage = <div>No content yet.</div>;
 
   return (
-    <div className="w-full md:w-3/5 md:h-screen bg-black text-white p-6">
-      <div className="flex justify-between items-center relative">
+    <div className="w-full md:w-2/5 md:h-screen bg-black text-white p-6 px-10 relative">
+      <button className="absolute top-0 left-2 md:left-0">
+        <MoveLeft />
+      </button>
+      <div className="flex justify-between items-center mt-10">
         <div className="flex flex-col">
           <div className="rounded-full bg-[#f9f9f9] w-24 h-24 mb-4"></div>
           <h1 className="text-xl">@KakarotBuilds</h1>
@@ -79,7 +82,7 @@ const Profile: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="absolute right-0 top-0 md:top-1/2 flex flex-col gap-2">
+        <div className="absolute right-0 md:right-10 top-1/4 flex flex-col gap-2">
           <span className="text-xl underline text-yellow-400 flex items-center justify-center">
             <span> 30.23</span>
             <Info className="h-4 w-4 ml-1 mt-1" />
